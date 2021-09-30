@@ -1,0 +1,63 @@
+version: '3.3'
+services:
+  trans-seed:
+    image: "anieshaz/dse-server:5.1.24"
+    container_name: trans-seed
+    # command: -Dcassandra.consistent.rangemovement=false
+    environment:
+      - DS_LICENSE=accept
+      - DC=trans
+      - CLUSTER_NAME=poc_cluster
+      - SNITCH=GossipingPropertyFileSnitch
+      - NUM_TOKENS=8
+      - JVM_EXTRA_OPTS=-Xmx1g -Xms1g
+    # Allow DSE to lock memory with mlock
+    ports: 
+      - 8983:8983
+      - 9042:9042
+    cap_add:
+    - IPC_LOCK
+    ulimits:
+      memlock: -1
+  analytics-seed:
+    image: "anieshaz/dse-server:5.1.24"
+    # command: -Dcassandra.consistent.rangemovement=false
+    container_name: analytics-seed
+    command: -k
+    environment:
+      - DS_LICENSE=accept
+      - DC=analytics
+      - SEEDS=trans-seed
+      - CLUSTER_NAME=poc_cluster
+      - SNITCH=GossipingPropertyFileSnitch
+      - NUM_TOKENS=8
+      - JVM_EXTRA_OPTS=-Xmx1g -Xms1g
+      - PYTHONPATH=/opt/dse/resources/spark/python
+    links:
+      - trans-seed
+    # Allow DSE to lock memory with mlock
+    ports:
+      - 8888:8888
+    cap_add:
+    - IPC_LOCK
+    ulimits:
+      memlock: -1
+    volumes: 
+      - ./mnt/cassandra/analytics-seed/cassandra:/var/lib/cassandra
+      - ./mnt/cassandra/analytics-seed/spark:/var/lib/spark
+  ds-studio:
+    container_name: ds-studio
+    image: datastax/dse-studio
+    ports:
+      - 8080:9091
+    links:
+      - trans-seed
+      - analytics-seed
+    environment:
+      - DS_LICENSE=accept 
+    cap_add:
+    - IPC_LOCK
+    ulimits:
+      memlock: -1
+    volumes: 
+      - ./mnt/ds-studio/:/var/lib/datastax-studio     
