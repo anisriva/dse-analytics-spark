@@ -58,9 +58,25 @@ docker-compose -f $compose_path up -d \
 
 check_server 2
 
-echo 'All nodes started, setting up all the spark related keyspaces' 
+while ! docker exec analytics-seed grep -q "DSE startup complete" //var//log//cassandra//system.log
+do
+  sleep 10
+  echo 'Waiting for Analytics cluster to stabalize'
+done;
 
-sleep 10
+while !  docker exec analytics-seed grep -q "SPARK-WORKER service is running" //var//log//spark//worker//worker.log
+do
+  sleep 10
+  echo 'Waiting for Spark Worker to start'
+done;
+
+while ! docker exec analytics-seed grep -q "SPARK-MASTER service is running" //var//log//spark//master//master.log
+do
+  sleep 10
+  echo 'Waiting for Spark Master to start'
+done;
+
+echo 'All nodes started, setting up all the spark related keyspaces' 
 
 docker exec -t trans-seed cqlsh -u cassandra -p cassandra -e "ALTER KEYSPACE cfs WITH replication = {'class': 'NetworkTopologyStrategy', 'analytics':1};
 ALTER KEYSPACE cfs_archive WITH replication = {'class': 'NetworkTopologyStrategy', 'analytics':1};
@@ -95,6 +111,10 @@ else
     docker exec -t analytics-seed nodetool repair PortfolioDemo
 fi
 
+echo "Starting thrift server"
+docker exec analytics-seed dse spark-sql-thriftserver start --hiveconf hive.server2.thrift.client.user=dse hive.server2.thrift.client.password=dse
+
+
 echo "Run below command to start jupyter:
 --------------------------------------
 1. Enter the docker container 
@@ -111,4 +131,10 @@ echo "Run below command to start jupyter:
     nohup jupyter notebook --ip=analytics-seed --port=8888 --NotebookApp.token='' --NotebookApp.password='' &
 
 4. exit
+"
+
+echo "Connection String to connect to spark sql using sql clients : 
+    url : jdbc:hive2://localhost:10000/PortfolioDemo
+    uname : dse
+    password : dse
 "

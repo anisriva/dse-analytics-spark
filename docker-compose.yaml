@@ -31,13 +31,15 @@ services:
       - CLUSTER_NAME=poc_cluster
       - SNITCH=GossipingPropertyFileSnitch
       - NUM_TOKENS=8
-      - JVM_EXTRA_OPTS=-Xmx1g -Xms1g
+      - JVM_EXTRA_OPTS=-Xmx8g -Xms1g
       - PYTHONPATH=/opt/dse/resources/spark/python
     links:
       - trans-seed
     # Allow DSE to lock memory with mlock
     ports:
       - 8888:8888
+      - 10000:10000
+      - 7080-7100:7080-7100
     cap_add:
     - IPC_LOCK
     ulimits:
@@ -49,7 +51,7 @@ services:
     container_name: ds-studio
     image: datastax/dse-studio
     ports:
-      - 8080:9091
+      - 9091:9091
     links:
       - trans-seed
       - analytics-seed
