@@ -1,4 +1,4 @@
-# Using DSE Analytics
+# Using DSE Analytics (Quick Start)
 
 ## Starting up the cluster
 
@@ -65,3 +65,22 @@ docker container exec -it analytics-seed dse spark
 ```bash
 docker container exec -it analytics-seed dse pyspark
 ```
+
+## Setting up spark sql on sql client like dbeaver
+
+1. Install Dbeaver thru below link:
+   <https://dbeaver.com/download/lite/>
+2. Click on database on the menu bar and click on new database connection
+3. Select **Apache Hive**
+
+    ![Hive Setup](./resource/hive-setup.png)
+
+4. Click next and setup the JDBC parameters as show in below image
+
+    ![Connection String](./resource/hive-uri.png)
+
+5. Now we are all set to start running HQL queries
+
+    ![HQL](./resource/hql.png)
+
+**Note** : 10000 port should be exposed for the docker container and for username and password use “dse”
