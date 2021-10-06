@@ -115,7 +115,11 @@ else
 fi
 
 echo "Starting thrift server"
-docker exec analytics-seed dse spark-sql-thriftserver start --hiveconf hive.server2.thrift.client.user=dse hive.server2.thrift.client.password=dse
+docker exec analytics-seed \
+dse spark-sql-thriftserver start --hiveconf \
+hive.server2.thrift.client.user=dse \
+hive.server2.thrift.client.password=dse \
+--conf spark.cores.max=2
 
 echo "Starting jupyter notebook"
 docker exec analytics-seed sh //opt//dse//resources//spark//bin//start_jupyter.sh
