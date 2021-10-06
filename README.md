@@ -22,7 +22,7 @@ Note: This will clean up all the saved data.
 
 Click on below link to access the dse-studio
 
-[DSE-Studio](http://localhost:8080/)
+[DSE-Studio](http://localhost:9091/)
 
 ## Using Jupyter Notebook
 
