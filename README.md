@@ -24,29 +24,13 @@ Click on below link to access the dse-studio
 
 [DSE-Studio](http://localhost:8080/)
 
-## Starting up Jupyter Notebook
+## Using Jupyter Notebook
 
-### Enter the analytics container
+Click on below link to access the jupyter notebook
 
-```bash
-docker container exec -it analytics-seed bash
-```
+[Jupyter](http://localhost:8888/)
 
-### Enter the work directory
-
-```bash
-cd /var/lib/spark/jupyter
-```
-
-### Start Jupyter Notebook
-
-```bash
-nohup jupyter notebook --ip=analytics-seed --port=8888 --NotebookApp.token='' --NotebookApp.password='' &
-
-exit
-```
-
-## Using the spark shell
+## Using the spark shells
 
 ### Spark-sql
 
