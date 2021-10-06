@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   trans-seed:
-    image: "anieshaz/dse-server:5.1.24"
+    image: "anieshaz/dse-server:5.1.24-buster"
     container_name: trans-seed
     # command: -Dcassandra.consistent.rangemovement=false
     environment:
@@ -20,7 +20,7 @@ services:
     ulimits:
       memlock: -1
   analytics-seed:
-    image: "anieshaz/dse-server:5.1.24"
+    image: "anieshaz/dse-server:5.1.24-buster"
     # command: -Dcassandra.consistent.rangemovement=false
     container_name: analytics-seed
     command: -k
