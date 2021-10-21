@@ -22,13 +22,13 @@ Note: This will clean up all the saved data.
 
 Click on below link to access the dse-studio
 
-[DSE-Studio](http://localhost:9091/)
+   <a href="http://localhost:9091/" target="_blank">DSE-Studio</a>
 
 ## Using Jupyter Notebook
 
 Click on below link to access the jupyter notebook
 
-[Jupyter](http://localhost:8888/)
+   <a href="http://localhost:8888/tree/notebooks" target="_blank">Click here for Jupyter Notebook</a>
 
 ## Using the spark shells
 
@@ -53,7 +53,9 @@ docker container exec -it analytics-seed dse pyspark
 ## Setting up spark sql on sql client like dbeaver
 
 1. Install Dbeaver thru below link:
-   [https://dbeaver.com/download/lite/](https://dbeaver.com/download/lite/)
+
+   <a href="https://dbeaver.com/download/lite/" target="_blank">https://dbeaver.com/download/lite/</a>
+
 2. Click on database on the menu bar and click on new database connection
 3. Select **Apache Hive**
 
@@ -78,7 +80,9 @@ docker container exec -it analytics-seed dse pyspark
 [Docs](./resources/docs/video_materials.md)
 
 ## Jupyter Notebook Exercises and docs
+   <a href="http://localhost:8888/tree/notebooks" target="_blank">Click here for Jupyter Notebook</a>
 
-[Jupyter Notebook](http://localhost:8888/tree/notebooks)
+*Note : The above link will only work if the start script is executed!*
+
 
 [Docs for further reading](./resources/docs/further.md)
