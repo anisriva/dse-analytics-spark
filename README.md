@@ -73,6 +73,8 @@ docker container exec -it analytics-seed dse pyspark
 
 # Follow below links to learn spark
 
+[Spark Basics](./resources/docs/basics.md)
+
 ## Video Content
 
 [Docs](./resources/docs/video_materials.md)

@@ -19,6 +19,8 @@ services:
     - IPC_LOCK
     ulimits:
       memlock: -1
+    volumes: 
+      - ./mnt/cassandra/trans-seed/cassandra:/var/lib/cassandra      
   analytics-seed:
     image: "anieshaz/dse-server:5.1.24-buster"
     # command: -Dcassandra.consistent.rangemovement=false
