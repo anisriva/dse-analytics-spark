@@ -48,6 +48,9 @@ docker-compose -f $compose_path up -d \
 --scale trans-seed=1 \
 --scale analytics-seed=0 \
 --scale ds-studio=1 \
+--scale postgres=1 \
+--scale scheduler=1 \
+--scale webserver=1 \
 --remove-orphans
 
 check_server 1

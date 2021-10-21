@@ -3,7 +3,8 @@ mnt/
 __pycache__/
 *.py[cod]
 *$py.class
-
+.idea/
+resources/jupyter/data/
 # C extensions
 *.so
 
