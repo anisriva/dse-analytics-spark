@@ -44,7 +44,7 @@ def generate_emptable(n):
             + "'" + empname + "', " + "'" + str(salary) + "'" + "), "
         val=val[:-2]
 
-        tmp_sql+= f"\nINSERT INTO \"PortfolioDemo\".\"employees\"(empid, depid, empname, salary) \nVALUES {val};"
+        tmp_sql+= f"\nINSERT INTO \"nitro\".\"emp\"(empid, depid, empname, salary) \nVALUES {val};"
 
     output = f"""BEGIN BATCH \n{tmp_sql}\n\nAPPLY BATCH"""
 
@@ -64,7 +64,7 @@ def generate_deptable(n):
             + "'" + depmgr + "', " + "'" + str(locid) + "'" + "), "
         val=val[:-2]
 
-        tmp_sql+= f"\nINSERT INTO \"PortfolioDemo\".\"departments\"(depid, empid, depmgr, locid) \nVALUES {val}"
+        tmp_sql+= f"\nINSERT INTO \"nitro\".\"dept\"(depid, empid, depmgr, locid) \nVALUES {val}"
 
     output = f"""BEGIN BATCH \n{tmp_sql}\n\nAPPLY BATCH"""
 
