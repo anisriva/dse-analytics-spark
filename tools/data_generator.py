@@ -1,7 +1,8 @@
-import sys 
+import sys
 from random import randint, choice, randrange
 from tqdm import tqdm
 from datetime import timedelta, datetime
+import subprocess
 
 def generate_letter():
     lower = chr(randint(ord('a'), ord('z')))
@@ -44,9 +45,9 @@ def generate_emptable(n):
             + "'" + empname + "', " + "'" + str(salary) + "'" + "), "
         val=val[:-2]
 
-        tmp_sql+= f"\nINSERT INTO \"PortfolioDemo\".\"employees\"(empid, depid, empname, salary) \nVALUES {val};"
+        tmp_sql+= f"\nINSERT INTO \"nitro\".\"emp\"(empid, depid, empname, salary) \nVALUES {val};"
 
-    output = f"""BEGIN BATCH \n{tmp_sql}\n\nAPPLY BATCH"""
+    output = f"""{tmp_sql}\n"""
 
     return output
 
@@ -64,17 +65,17 @@ def generate_deptable(n):
             + "'" + depmgr + "', " + "'" + str(locid) + "'" + "), "
         val=val[:-2]
 
-        tmp_sql+= f"\nINSERT INTO \"PortfolioDemo\".\"departments\"(depid, empid, depmgr, locid) \nVALUES {val}"
+        tmp_sql+= f"\nINSERT INTO \"nitro\".\"dept\"(depid, empid, depname, locationid) \nVALUES {val};"
 
-    output = f"""BEGIN BATCH \n{tmp_sql}\n\nAPPLY BATCH"""
+    output = f"""{tmp_sql}\n"""
 
     return output
 
 def generate_inserts():
     return "INSERT INTO inventory.customers(id,first_name,last_name,email) VALUES ({},'{}','{}','{}');".format(randint(1,int(9999999)), generate_word(10), generate_word(15), generate_word(20), generate_word(20))
 
-emp = generate_emptable(500000)
-dep = generate_deptable(500000)
+emp = generate_emptable(int(sys.argv[1]))
+dep = generate_deptable(int(sys.argv[1]))
 
 f = open('emptable.txt', 'w')
 f.write(emp)
@@ -83,3 +84,6 @@ f.close()
 f = open('deptable.txt', 'w')
 f.write(dep)
 f.close()
+
+subprocess.run(['cqlsh', '10.100.200.161', '-f', 'emptable.txt'], stdout=subprocess.PIPE)
+subprocess.run(['cqlsh', '10.100.200.161', '-f', 'deptable.txt'], stdout=subprocess.PIPE)
