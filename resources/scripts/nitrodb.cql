@@ -6,10 +6,10 @@ USE nitro;
 
 CREATE TABLE emp(
   empid int,
-  deptid int,
+  depid int,
   empname text,
   salary int,
-  PRIMARY KEY(empid, deptid)
+  PRIMARY KEY(empid, depid)
 ) WITH cdc=true;
 
 

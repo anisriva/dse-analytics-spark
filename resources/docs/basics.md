@@ -33,3 +33,23 @@
 * Its created by a driver program (Spark context)
 * Spark Context is responsible for creating RDDs
 * sc objects are created automatically in spark shells
+
+### Common Transformations:
+
+* map
+* flatmap
+* filter
+* distinct
+* sample
+* union, intersection, subtract, cartesian
+
+### Common Actions:
+
+* collect
+* count
+* countByValue
+* take
+* top
+* reduce
+
+Nothing actually happens in the driver program until an action is called!

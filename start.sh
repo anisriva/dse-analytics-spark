@@ -13,8 +13,8 @@
 # Author : Animesh Srivastava                                   #                              
 #                                                               #  
 #################################################################                                                    
-
-compose_path='docker-compose.yaml'
+export HOME=`pwd`
+compose_path=$HOME/docker-compose.yaml
 
 check_server() {
     servers_up=`docker exec trans-seed dsetool status | grep UN | wc -l`
