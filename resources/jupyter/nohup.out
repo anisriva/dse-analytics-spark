@@ -1,0 +1,7 @@
+[W 07:36:45.192 NotebookApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 07:36:45.193 NotebookApp] The port 8888 is already in use, trying another port.
+[I 07:36:45.206 NotebookApp] Serving notebooks from local directory: /var/lib/spark/jupyter
+[I 07:36:45.207 NotebookApp] The Jupyter Notebook is running at:
+[I 07:36:45.208 NotebookApp] http://analytics-seed:8889/
+[I 07:36:45.208 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 07:36:45.213 NotebookApp] No web browser found: could not locate runnable browser.

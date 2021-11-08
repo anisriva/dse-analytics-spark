@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   trans-seed:
-    image: "anieshaz/dse-server:5.1.24-buster"
+    image: "anieshaz/dse-server:5.1.24-alpine"
     container_name: trans-seed
     # command: -Dcassandra.consistent.rangemovement=false
     environment:
@@ -20,9 +20,9 @@ services:
     ulimits:
       memlock: -1
     volumes: 
-      - ./mnt/cassandra/trans-seed/cassandra:/var/lib/cassandra      
+      - $HOME/mnt/cassandra/trans-seed/cassandra:/var/lib/cassandra      
   analytics-seed:
-    image: "anieshaz/dse-server:5.1.24-buster"
+    image: "anieshaz/dse-server:5.1.24-alpine"
     # command: -Dcassandra.consistent.rangemovement=false
     container_name: analytics-seed
     command: -k
@@ -48,9 +48,9 @@ services:
     ulimits:
       memlock: -1
     volumes: 
-      - ./mnt/cassandra/analytics-seed/cassandra:/var/lib/cassandra
-      - ./mnt/cassandra/analytics-seed/spark:/var/lib/spark
-      - ./resources/jupyter:/var/lib/spark/jupyter
+      - $HOME/mnt/cassandra/analytics-seed/cassandra:/var/lib/cassandra
+      - $HOME/mnt/cassandra/analytics-seed/spark:/var/lib/spark
+      - $HOME/resources/jupyter:/var/lib/spark/jupyter
   ds-studio:
     container_name: ds-studio
     image: datastax/dse-studio
@@ -66,7 +66,7 @@ services:
     ulimits:
       memlock: -1
     volumes: 
-      - ./mnt/ds-studio/:/var/lib/datastax-studio
+      - $HOME/mnt/ds-studio/:/var/lib/datastax-studio
   postgres:
       container_name: postgres_airflow_spark
       image: postgres:latest
@@ -75,41 +75,38 @@ services:
           - POSTGRES_PASSWORD=airflow
           - POSTGRES_DB=airflow
       volumes:
-          - ./mnt/airflow/pg_data:/var/lib/postgresql/data
+          - $HOME/mnt/airflow/pg_data:/var/lib/postgresql/data
       ports:
           - "0.0.0.0:5433:5432"
   scheduler:
-      image: apache/airflow
+      image: anieshaz/apache-airflow-java:2.1.4
       container_name: airflow_scheduler_spark
       restart: always
       depends_on:
           - postgres
       env_file:
-          - ./resources/airflow/.env
+          - $HOME/resources/airflow/.env
       volumes:
-          - ./resources/airflow/dags:/opt/airflow/dags
-          - ./mnt/airflow/logs:/opt/airflow/logs
+          - $HOME/resources/airflow/dags:/opt/airflow/dags
+          - $HOME/mnt/airflow/logs:/opt/airflow/logs
       command:  >
           bash -c "
-          pip install confluent-kafka pyyaml mysql.connector apache-airflow-providers-apache-spark &&
           airflow db upgrade &&
           airflow users create -u admin -f FIRST_NAME -l LAST_NAME -r Admin -e admin@example.org -p admin &&
           airflow scheduler"
   webserver:
       container_name: airflow_webserver_spark
-      image: apache/airflow
+      image: anieshaz/apache-airflow-java:2.1.4
       restart: on-failure
       env_file:
-          - ./resources/airflow/.env
+          - $HOME/resources/airflow/.env
       depends_on:
           - postgres
           - scheduler
       volumes:
-          - ./resources/airflow/dags:/opt/airflow/dags
-          - ./mnt/airflow/logs:/opt/airflow/logs
+          - $HOME/resources/airflow/dags:/opt/airflow/dags
+          - $HOME/mnt/airflow/logs:/opt/airflow/logs
       ports:
           - "0.0.0.0:8080:8080"
       command:  >
-          bash -c "
-          pip install confluent-kafka pyyaml mysql.connector apache-airflow-providers-apache-spark &&
-          airflow webserver"      
+          bash -c "airflow webserver"      
