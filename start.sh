@@ -134,5 +134,9 @@ echo "Use below link to login to jupyter notebook:
 echo "Connection String to connect to spark sql using sql clients : 
     url : jdbc:hive2://localhost:10000/PortfolioDemo
     uname : dse
-    password : dse
+    password : password
+
+    Start the ssh server in the analytics-seed:
+    > docker exec -it analytics-seed bash
+    > echo password | sudo -S /etc/init.d/ssh start
 "
