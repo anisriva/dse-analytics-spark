@@ -79,7 +79,7 @@ services:
       ports:
           - "0.0.0.0:5433:5432"
   scheduler:
-      image: anieshaz/apache-airflow-java:2.1.4
+      image: apache/airflow
       container_name: airflow_scheduler_spark
       restart: always
       depends_on:
@@ -96,7 +96,7 @@ services:
           airflow scheduler"
   webserver:
       container_name: airflow_webserver_spark
-      image: anieshaz/apache-airflow-java:2.1.4
+      image: apache/airflow
       restart: on-failure
       env_file:
           - $HOME/resources/airflow/.env
