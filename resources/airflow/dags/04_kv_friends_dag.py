@@ -28,8 +28,8 @@ executor_memory = 1
 executor_cores = 1
 
 # Define the task level variables
-task_name = 'apple_stocks'
-spark_script = 'apple_stocks.py'
+task_name = 'kv_friends'
+spark_script = 'kv_friends.py'
 
 # Defining the dag arguments
 default_args={

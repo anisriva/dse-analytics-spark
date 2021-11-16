@@ -5,3 +5,916 @@
 [I 07:36:45.208 NotebookApp] http://analytics-seed:8889/
 [I 07:36:45.208 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 [W 07:36:45.213 NotebookApp] No web browser found: could not locate runnable browser.
+[W 11:37:44.573 NotebookApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 11:37:44.581 NotebookApp] Serving notebooks from local directory: /var/lib/spark/jupyter
+[I 11:37:44.581 NotebookApp] The Jupyter Notebook is running at:
+[I 11:37:44.581 NotebookApp] http://analytics-seed:8888/
+[I 11:37:44.582 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 11:37:44.585 NotebookApp] No web browser found: could not locate runnable browser.
+[I 11:37:53.539 NotebookApp] 302 GET / (172.24.0.1) 0.63ms
+[E 11:37:53.589 NotebookApp] Could not open static file ''
+[W 11:37:53.650 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 8.87ms referer=http://localhost:8888/tree?
+[W 11:37:53.748 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.94ms referer=http://localhost:8888/tree?
+[W 11:38:05.593 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.06ms referer=http://localhost:8888/notebooks/notebooks/rdd/01_RDD_basics.ipynb
+[W 11:38:05.727 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.55ms referer=http://localhost:8888/notebooks/notebooks/rdd/01_RDD_basics.ipynb
+[I 11:38:06.289 NotebookApp] Writing notebook-signing key to /opt/dse/.local/share/jupyter/notebook_secret
+[W 11:38:06.291 NotebookApp] Notebook notebooks/rdd/01_RDD_basics.ipynb is not trusted
+[I 11:38:06.530 NotebookApp] Kernel started: 5c9dd9a3-8432-4384-8897-2643ff78b6c7
+[I 11:38:07.027 NotebookApp] Adapting to protocol v5.1 for kernel 5c9dd9a3-8432-4384-8897-2643ff78b6c7
+[I 11:40:06.566 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:42:06.556 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:44:06.507 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:46:06.519 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:48:06.556 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:50:06.510 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 11:50:34.150 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 12:16:06.525 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 12:47:28.783 NotebookApp] Creating new notebook in /notebooks/rdd
+[W 12:47:29.023 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.05ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[W 12:47:29.115 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.40ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[I 12:47:29.569 NotebookApp] Kernel started: 2678aa33-91f1-4148-9428-3429d3545de4
+[I 12:47:29.915 NotebookApp] Adapting to protocol v5.1 for kernel 2678aa33-91f1-4148-9428-3429d3545de4
+[I 12:48:06.866 NotebookApp] Saving file at /notebooks/rdd/01_RDD_basics.ipynb
+[I 12:49:29.547 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 12:51:29.533 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 12:53:29.606 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 12:55:29.524 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 12:57:29.577 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 12:59:29.814 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[Stage 0:>                                                          (0 + 2) / 2]                                                                                [I 13:01:29.543 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[Stage 1:>                                                          (0 + 0) / 2]                                                                                [I 13:03:29.567 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+WARN  2021-11-09 13:04:12,500 org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 2.0 (TID 5, 172.24.0.5): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/worker.py", line 173, in main
+    process()
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/worker.py", line 168, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/serializers.py", line 263, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "<ipython-input-12-332a78f67d1d>", line 2, in parseLine
+AttributeError: 'unicode' object has no attribute 'map'
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:194)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:235)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:153)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:64)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-09 13:04:12,594 org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 2.0 failed 4 times; aborting job
+[I 13:05:19.737 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 13:05:29.567 NotebookApp] Saving file at /notebooks/rdd/02_key_value.ipynb
+[I 13:07:29.537 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[I 13:09:29.579 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[I 13:13:29.537 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+WARN  2021-11-09 13:13:50,556 org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 4.0 (TID 15, 172.24.0.5): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/worker.py", line 173, in main
+    process()
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/worker.py", line 168, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/dse/resources/spark/python/pyspark/rdd.py", line 2374, in pipeline_func
+    return func(split, prev_func(split, iterator))
+  File "/opt/dse/resources/spark/python/pyspark/rdd.py", line 2374, in pipeline_func
+    return func(split, prev_func(split, iterator))
+  File "/opt/dse/resources/spark/python/pyspark/rdd.py", line 320, in func
+    return f(iterator)
+  File "/opt/dse/resources/spark/python/pyspark/rdd.py", line 1795, in combineLocally
+    merger.mergeValues(iterator)
+  File "/opt/dse/resources/spark/python/lib/pyspark.zip/pyspark/shuffle.py", line 238, in mergeValues
+    d[k] = comb(d[k], v) if k in d else creator(v)
+  File "<ipython-input-21-c6e7afd971c7>", line 1, in <lambda>
+TypeError: 'int' object has no attribute '__getitem__'
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:194)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:235)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:153)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:64)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.api.python.PairwiseRDD.compute(PythonRDD.scala:391)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:79)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:47)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-09 13:13:50,659 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 4.0 failed 4 times; aborting job
+[I 13:15:29.524 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[Stage 11:>                                                         (0 + 0) / 2]                                                                                [I 13:17:29.566 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[Stage 15:>                                                         (0 + 0) / 2]                                                                                [I 13:19:29.813 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+ERROR 2021-11-09 13:41:04,736 org.apache.spark.deploy.rm.DseSchedulerBackend: Scheduler backend is dead: Master removed our application: Heartbeat notification that app has been removed
+ERROR 2021-11-09 13:41:04,840 org.apache.spark.deploy.rm.DseAppClient: Failed to unregister application
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.deploy.rm.DseAppClient.stop(DseAppClient.scala:222)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.org$apache$spark$deploy$rm$DseSchedulerBackend$$stop(DseSchedulerBackend.scala:242)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.stop(DseSchedulerBackend.scala:114)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:455)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1605)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1783)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1293)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1782)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend$$anon$1.run(DseSchedulerBackend.scala:162)
+Caused by: org.apache.spark.SparkException: Could not find DseAppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:511)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 9 common frames omitted
+[I 13:59:29.534 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[I 13:59:34.220 NotebookApp] Saving file at /notebooks/rdd/02_key_value_friends.ipynb
+[W 13:59:36.595 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.25ms referer=http://localhost:8888/tree/notebooks/rdd
+[W 13:59:36.706 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.92ms referer=http://localhost:8888/tree/notebooks/rdd
+[I 14:00:27.312 NotebookApp] Creating new notebook in /notebooks/rdd
+[W 14:00:27.533 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.99ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[W 14:00:27.579 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.29ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[I 14:00:27.970 NotebookApp] Kernel started: a92270d5-adf9-4b86-aa04-c6546a8cb105
+[I 14:00:28.305 NotebookApp] Adapting to protocol v5.1 for kernel a92270d5-adf9-4b86-aa04-c6546a8cb105
+[I 14:02:27.997 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:04:27.935 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:06:27.938 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[Stage 0:>                                                          (0 + 2) / 2]                                                                                [I 14:08:27.943 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[Stage 4:>                                                          (0 + 0) / 2]                                                                                [I 14:10:27.939 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:12:27.933 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:14:27.943 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:16:27.977 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:18:28.810 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:42:28.817 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 14:44:27.937 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+ERROR 2021-11-09 14:55:47,300 org.apache.spark.deploy.rm.DseSchedulerBackend: Scheduler backend is dead: Master removed our application: Heartbeat notification that app has been removed
+ERROR 2021-11-09 14:55:47,362 org.apache.spark.deploy.rm.DseAppClient: Failed to unregister application
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.deploy.rm.DseAppClient.stop(DseAppClient.scala:222)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.org$apache$spark$deploy$rm$DseSchedulerBackend$$stop(DseSchedulerBackend.scala:242)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.stop(DseSchedulerBackend.scala:114)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:455)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1605)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1783)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1293)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1782)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend$$anon$1.run(DseSchedulerBackend.scala:162)
+Caused by: org.apache.spark.SparkException: Could not find DseAppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:511)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 9 common frames omitted
+[I 14:58:28.847 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 15:58:27.938 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[Stage 0:>                                                          (0 + 2) / 2]                                                                                [I 15:59:46.071 NotebookApp] Starting buffering for 5c9dd9a3-8432-4384-8897-2643ff78b6c7:568c1c1d633f44bc864a33d3626eaa0f
+[I 15:59:58.672 NotebookApp] Starting buffering for 2678aa33-91f1-4148-9428-3429d3545de4:3f6342e9cb5542ef9c95f9fc13778927
+[I 16:00:28.857 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 16:25:40.820 NotebookApp] Creating new notebook in /notebooks/rdd
+[W 16:25:41.105 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.89ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[W 16:25:41.206 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.57ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[I 16:25:41.644 NotebookApp] Kernel started: 1fb8d6ad-0742-43c7-9820-47706c95854b
+[I 16:25:42.019 NotebookApp] Adapting to protocol v5.1 for kernel 1fb8d6ad-0742-43c7-9820-47706c95854b
+[I 16:26:28.867 NotebookApp] Saving file at /notebooks/rdd/03_filtering_rdds.ipynb
+[I 16:27:41.789 NotebookApp] Saving file at /notebooks/rdd/04_flat_map.ipynb
+[I 16:29:41.598 NotebookApp] Saving file at /notebooks/rdd/04_flat_map.ipynb
+[Stage 0:>                                                          (0 + 2) / 2]                                                                                [Stage 1:>                                                          (0 + 0) / 2]                                                                                [Stage 3:>                                                          (0 + 0) / 2]                                                                                [I 16:31:41.615 NotebookApp] Saving file at /notebooks/rdd/04_flat_map.ipynb
+[Stage 5:>                                                          (0 + 0) / 2][Stage 6:>                                                          (0 + 0) / 2]                                                                                [I 16:33:41.604 NotebookApp] Saving file at /notebooks/rdd/04_flat_map.ipynb
+[Stage 8:>                                                          (0 + 0) / 2]                                                                                [I 16:35:41.648 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:47:41.623 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:49:41.617 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:51:41.615 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:51:54.072 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:53:41.607 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:55:41.647 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 16:57:41.622 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[Stage 46:>                                                         (0 + 0) / 2]                                                                                [I 16:59:41.820 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 17:01:41.606 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 17:03:41.869 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 17:04:44.352 NotebookApp] Creating new notebook in /notebooks/rdd
+[W 17:04:44.925 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 6.31ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[W 17:04:45.171 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.79ms referer=http://localhost:8888/notebooks/notebooks/rdd/Untitled.ipynb?kernel_name=python2
+[I 17:04:45.940 NotebookApp] Kernel started: 91072b65-279c-4c2d-b341-43cb8d9ca8c9
+[I 17:04:46.758 NotebookApp] Adapting to protocol v5.1 for kernel 91072b65-279c-4c2d-b341-43cb8d9ca8c9
+[I 17:05:41.826 NotebookApp] Saving file at /notebooks/rdd/04_flat_map_word_count.ipynb
+[I 17:06:45.907 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[Stage 0:>                                                          (0 + 0) / 2][Stage 0:>                                                          (0 + 2) / 2]                                                                                [Stage 3:>                                                          (0 + 0) / 2]                                                                                [Stage 5:>                                                          (0 + 0) / 2]                                                                                [I 17:08:45.916 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[I 17:10:45.928 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[Stage 6:>                                                          (0 + 0) / 2][Stage 7:>                                                          (0 + 0) / 2]                                                                                [Stage 12:>                                                         (0 + 0) / 2]                                                                                [Stage 14:>                                                         (0 + 0) / 2]                                                                                [I 17:12:45.957 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[Stage 26:>                                                         (0 + 0) / 2]                                                                                [I 17:14:45.907 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[Stage 33:>                                                         (0 + 0) / 2]                                                                                [Stage 35:>                                                         (0 + 0) / 2]                                                                                [Stage 41:>                                                         (0 + 0) / 2]                                                                                [I 17:16:46.810 NotebookApp] Saving file at /notebooks/rdd/06_customer_order_practice.ipynb
+[I 18:23:28.465 NotebookApp] Starting buffering for a92270d5-adf9-4b86-aa04-c6546a8cb105:5c93fa6a8df245e3840ed97db7b4b0a3
+[I 18:23:28.968 NotebookApp] Starting buffering for 1fb8d6ad-0742-43c7-9820-47706c95854b:261e141c28ef4ed7813561d78513a314
+[I 18:23:32.218 NotebookApp] Starting buffering for 91072b65-279c-4c2d-b341-43cb8d9ca8c9:27e7f410bbd643e0b62378ff757c6e2b
+[W 18:23:37.136 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.37ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 18:23:37.291 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.56ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 18:23:37.781 NotebookApp] Notebook notebooks/dataframes/1_intro_spark_df.ipynb is not trusted
+[I 18:23:38.356 NotebookApp] Kernel started: 6f321b7e-b1c6-4b00-9065-fc0858175aaa
+[I 18:23:38.836 NotebookApp] Adapting to protocol v5.1 for kernel 6f321b7e-b1c6-4b00-9065-fc0858175aaa
+[W 18:25:23.635 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.48ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_df_basic_ops.ipynb
+[W 18:25:23.760 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.87ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_df_basic_ops.ipynb
+[W 18:25:24.116 NotebookApp] Notebook notebooks/dataframes/2_df_basic_ops.ipynb is not trusted
+[I 18:25:24.360 NotebookApp] Kernel started: 8d953cb7-645e-4430-bd13-f2a8fc1f2f55
+[I 18:25:24.800 NotebookApp] Adapting to protocol v5.1 for kernel 8d953cb7-645e-4430-bd13-f2a8fc1f2f55
+[I 18:52:11.896 NotebookApp] Starting buffering for 8d953cb7-645e-4430-bd13-f2a8fc1f2f55:55b6e712e7064b909889c3c6a2376391
+[I 18:52:11.905 NotebookApp] Starting buffering for 6f321b7e-b1c6-4b00-9065-fc0858175aaa:f3ef33e542844ea1875eb61662e1aabd
+[I 03:31:45.022 NotebookApp] Adapting to protocol v5.1 for kernel 8d953cb7-645e-4430-bd13-f2a8fc1f2f55
+[I 03:31:45.029 NotebookApp] Restoring connection for 8d953cb7-645e-4430-bd13-f2a8fc1f2f55:55b6e712e7064b909889c3c6a2376391
+[I 03:31:45.044 NotebookApp] Adapting to protocol v5.1 for kernel 6f321b7e-b1c6-4b00-9065-fc0858175aaa
+[I 03:31:45.045 NotebookApp] Restoring connection for 6f321b7e-b1c6-4b00-9065-fc0858175aaa:f3ef33e542844ea1875eb61662e1aabd
+[I 06:58:05.354 NotebookApp] Starting buffering for 8d953cb7-645e-4430-bd13-f2a8fc1f2f55:55b6e712e7064b909889c3c6a2376391
+[I 06:58:05.563 NotebookApp] Kernel shutdown: 8d953cb7-645e-4430-bd13-f2a8fc1f2f55
+[W 06:58:10.030 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.85ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 06:58:10.145 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.58ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 06:58:10.571 NotebookApp] Notebook notebooks/dataframes/1_intro_spark_df.ipynb is not trusted
+[I 06:58:10.961 NotebookApp] Adapting to protocol v5.1 for kernel 6f321b7e-b1c6-4b00-9065-fc0858175aaa
+[I 06:58:14.161 NotebookApp] Kernel shutdown: 6f321b7e-b1c6-4b00-9065-fc0858175aaa
+[I 06:58:32.838 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 06:58:33.092 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.19ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 06:58:33.191 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.65ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 06:58:33.645 NotebookApp] Kernel started: 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 06:58:34.067 NotebookApp] Adapting to protocol v5.1 for kernel 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 06:58:39.027 NotebookApp] Starting buffering for 545207c5-75a0-4b25-b6b3-ed4bf061c952:7651d804329f4381b00fe1be650caa6f
+[W 06:58:40.392 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.01ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 06:58:40.507 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.64ms referer=http://localhost:8888/notebooks/notebooks/dataframes/1_intro_spark_df.ipynb
+[W 06:58:40.848 NotebookApp] Notebook notebooks/dataframes/1_intro_spark_df.ipynb is not trusted
+[I 06:58:41.236 NotebookApp] Kernel started: bc55230d-7faf-4190-98c1-f01e358a2177
+[I 06:58:41.658 NotebookApp] Adapting to protocol v5.1 for kernel bc55230d-7faf-4190-98c1-f01e358a2177
+[I 07:00:32.674 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[W 07:00:32.675 NotebookApp] Notebook notebooks/dataframes/2_intro_spark_schemas.ipynb is not trusted
+[I 07:00:39.277 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 07:00:39.511 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.37ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled1.ipynb?kernel_name=python2
+[W 07:00:39.605 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.39ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled1.ipynb?kernel_name=python2
+[I 07:00:40.031 NotebookApp] Kernel started: 99438fc5-1005-4681-963e-35695ad97e2a
+[I 07:00:40.392 NotebookApp] Adapting to protocol v5.1 for kernel 99438fc5-1005-4681-963e-35695ad97e2a
+[Stage 0:>                                                          (0 + 0) / 2][Stage 0:>                                                          (0 + 2) / 2][Stage 0:=============================>                             (1 + 1) / 2]                                                                                [I 07:02:40.337 NotebookApp] Saving file at /notebooks/dataframes/Untitled1.ipynb
+[I 07:02:41.248 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[W 07:02:41.249 NotebookApp] Notebook notebooks/dataframes/2_intro_spark_schemas.ipynb is not trusted
+[I 07:04:40.280 NotebookApp] Saving file at /notebooks/dataframes/Untitled1.ipynb
+[I 07:04:41.297 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 07:06:40.286 NotebookApp] Saving file at /notebooks/dataframes/Untitled1.ipynb
+[I 07:06:41.236 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 07:08:41.297 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 07:09:05.892 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 07:10:40.068 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[I 07:20:39.992 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[I 07:22:39.997 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[I 07:24:40.003 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[Stage 19:==============>                                        (51 + 6) / 199][Stage 19:==================>                                    (68 + 6) / 199][Stage 19:========================>                              (88 + 6) / 199][Stage 19:==============================>                       (111 + 7) / 199][Stage 19:=====================================>                (138 + 6) / 199][Stage 19:============================================>         (163 + 6) / 199][Stage 19:=================================================>    (184 + 6) / 199]                                                                                [I 07:26:40.348 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[I 09:37:35.222 NotebookApp] Starting buffering for 99438fc5-1005-4681-963e-35695ad97e2a:022bec33dc0b45f28574cb68c9cffe08
+[I 09:37:35.229 NotebookApp] Starting buffering for bc55230d-7faf-4190-98c1-f01e358a2177:499697015489414380fe47552f97a635
+WARN  2021-11-10 09:53:07,487 org.apache.spark.deploy.rm.DseAppClient$ClientEndpoint: Failed to send heartbeat: java.io.IOException: Failed to open native connection to Cassandra
+[I 09:53:13.794 NotebookApp] Adapting to protocol v5.1 for kernel 99438fc5-1005-4681-963e-35695ad97e2a
+[I 09:53:13.798 NotebookApp] Restoring connection for 99438fc5-1005-4681-963e-35695ad97e2a:022bec33dc0b45f28574cb68c9cffe08
+[I 09:53:13.857 NotebookApp] Adapting to protocol v5.1 for kernel bc55230d-7faf-4190-98c1-f01e358a2177
+[I 09:53:13.904 NotebookApp] Restoring connection for bc55230d-7faf-4190-98c1-f01e358a2177:499697015489414380fe47552f97a635
+ERROR 2021-11-10 09:53:23,110 org.apache.spark.scheduler.TaskSchedulerImpl: Lost executor 0 on 172.24.0.5: worker lost
+[I 09:58:12.417 NotebookApp] Saving file at /notebooks/dataframes/01_Intro_to_spark_df_api.ipynb
+[I 09:58:18.426 NotebookApp] Saving file at /notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 09:58:26.830 NotebookApp] Starting buffering for bc55230d-7faf-4190-98c1-f01e358a2177:499697015489414380fe47552f97a635
+[I 09:58:27.146 NotebookApp] Kernel shutdown: bc55230d-7faf-4190-98c1-f01e358a2177
+[I 09:58:31.390 NotebookApp] Starting buffering for 99438fc5-1005-4681-963e-35695ad97e2a:022bec33dc0b45f28574cb68c9cffe08
+[I 09:58:31.706 NotebookApp] Kernel shutdown: 99438fc5-1005-4681-963e-35695ad97e2a
+[W 09:58:40.859 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 5.77ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_df_basic_ops.ipynb
+[W 09:58:41.352 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.08ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_df_basic_ops.ipynb
+[W 09:58:42.366 NotebookApp] Notebook notebooks/dataframes/2_df_basic_ops.ipynb is not trusted
+[I 09:58:42.941 NotebookApp] Kernel started: b0073d91-997d-4472-993e-578b464d3c56
+[I 09:58:44.006 NotebookApp] Adapting to protocol v5.1 for kernel b0073d91-997d-4472-993e-578b464d3c56
+[I 10:00:43.033 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:00:43.036 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:02:43.052 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:02:43.054 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:04:43.072 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:04:43.076 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:06:43.061 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:06:43.065 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:08:42.997 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:08:43.000 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:10:43.044 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:10:43.047 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:12:43.002 NotebookApp] Saving file at /notebooks/dataframes/2_df_operations_filter_conditional.ipynb
+[W 10:12:43.006 NotebookApp] Notebook notebooks/dataframes/2_df_operations_filter_conditional.ipynb is not trusted
+[I 10:14:13.761 NotebookApp] Starting buffering for b0073d91-997d-4472-993e-578b464d3c56:2db64191bfa445d195a01a614e4d024d
+Unhandled exception in thread started by <bound method ParentPollerUnix.__bootstrap of <ParentPollerUnix(Thread-1, stopped daemon 139717894989568)>>[I 10:14:14.294 NotebookApp] Kernel shutdown: b0073d91-997d-4472-993e-578b464d3c56
+ERROR 2021-11-10 10:14:14,436 org.apache.spark.scheduler.LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+[W 10:14:19.168 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.27ms referer=http://localhost:8888/tree/notebooks/dataframes
+[W 10:14:19.438 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.57ms referer=http://localhost:8888/tree/notebooks/dataframes
+[W 10:14:23.047 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 11.74ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb
+[W 10:14:23.460 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 5.24ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb
+[I 10:14:24.721 NotebookApp] Adapting to protocol v5.1 for kernel 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 10:16:24.730 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:18:24.637 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:20:24.664 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[Stage 0:>                                                          (0 + 0) / 2][Stage 0:>                                                          (0 + 2) / 2]                                                                                [I 10:22:24.780 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:24:24.663 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:28:24.667 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:30:24.702 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:32:24.688 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[Stage 4:>                                                          (0 + 0) / 2]                                                                                [Stage 5:>                                                          (0 + 0) / 2]                                                                                [I 10:34:24.637 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[Stage 8:>                                                          (0 + 0) / 2][Stage 8:>                                                          (0 + 2) / 2][Stage 8:=============================>                             (1 + 1) / 2][Stage 9:>                                                        (0 + 0) / 200][Stage 9:>                                                        (2 + 8) / 200][Stage 9:==>                                                      (9 + 8) / 200][Stage 9:===>                                                    (12 + 6) / 200][Stage 9:=====>                                                  (18 + 6) / 200][Stage 9:=======>                                                (25 + 6) / 200][Stage 9:========>                                               (31 + 6) / 200][Stage 9:=========>                                              (35 + 6) / 200][Stage 9:============>                                           (45 + 6) / 200][Stage 9:=================>                                      (62 + 6) / 200][Stage 9:=====================>                                  (76 + 6) / 200][Stage 9:========================>                               (88 + 8) / 200][Stage 9:=============================>                         (109 + 9) / 200][Stage 9:==================================>                    (126 + 7) / 200][Stage 9:========================================>              (146 + 9) / 200][Stage 9:=============================================>         (166 + 9) / 200][Stage 9:==================================================>    (183 + 6) / 200]                                                                                [Stage 10:>                                                         (0 + 0) / 2][Stage 10:>                                                         (0 + 2) / 2][Stage 10:=============================>                            (1 + 1) / 2][Stage 11:=========>                                             (35 + 6) / 200][Stage 11:==============>                                        (51 + 7) / 200][Stage 11:====================>                                  (75 + 6) / 200][Stage 11:===========================>                          (101 + 6) / 200][Stage 11:==================================>                   (126 + 8) / 200][Stage 11:=========================================>           (156 + 11) / 200][Stage 11:=================================================>    (185 + 6) / 200]                                                                                ERROR 2021-11-10 10:44:23,839 org.apache.spark.scheduler.LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+[I 10:44:24.739 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:45:01.637 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df.ipynb
+[I 10:50:07.479 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df_rdd_boiler.ipynb
+[I 10:50:14.711 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 10:50:15.368 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.08ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 10:50:15.587 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.46ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 10:50:16.645 NotebookApp] Kernel started: 327dbd7f-0175-4fee-9145-be60bf22b020
+[I 10:50:17.744 NotebookApp] Adapting to protocol v5.1 for kernel 327dbd7f-0175-4fee-9145-be60bf22b020
+[I 10:52:16.658 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 10:54:16.666 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[I 10:56:16.688 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[I 10:58:16.652 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[I 11:00:16.684 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[I 11:02:16.606 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[Stage 12:=====>                                                 (19 + 6) / 199][Stage 12:=======>                                               (26 + 6) / 199][Stage 12:========>                                              (30 + 6) / 199][Stage 12:==========>                                            (39 + 6) / 199][Stage 12:==============>                                        (52 + 6) / 199][Stage 12:==================>                                    (67 + 6) / 199][Stage 12:=====================>                                 (77 + 6) / 199][Stage 12:========================>                              (88 + 9) / 199][Stage 12:===========================>                          (103 + 6) / 199][Stage 12:================================>                     (119 + 6) / 199][Stage 12:====================================>                 (135 + 6) / 199][Stage 12:========================================>             (148 + 9) / 199][Stage 12:=============================================>        (169 + 6) / 199][Stage 12:===================================================>  (191 + 6) / 199]                                                                                [I 11:04:16.645 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+ERROR 2021-11-10 11:05:00,109 org.apache.spark.scheduler.LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+[I 11:06:16.670 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[I 11:08:16.648 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[Stage 11:==========>                                            (38 + 6) / 199][Stage 11:==================>                                    (66 + 7) / 199][Stage 11:=========================>                             (92 + 6) / 199][Stage 11:==============================>                       (111 + 6) / 199][Stage 11:==================================>                   (127 + 6) / 199][Stage 11:========================================>             (148 + 6) / 199][Stage 11:=============================================>        (166 + 6) / 199][Stage 11:===================================================>  (189 + 9) / 199]                                                                                [I 11:24:16.667 NotebookApp] Saving file at /notebooks/dataframes/05_friends_only_df_api.ipynb
+[W 11:29:02.483 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 6.41ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_intro_spark_schemas.ipynb
+[W 11:29:02.844 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 5.85ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 11:29:05.918 NotebookApp] Kernel started: 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 11:29:07.198 NotebookApp] Adapting to protocol v5.1 for kernel 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 11:33:29.930 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 11:33:31.021 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.53ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 11:33:31.233 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.56ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 11:33:32.834 NotebookApp] Kernel started: 8b001184-658a-4c7d-9265-9471a8183c69
+[I 11:33:34.687 NotebookApp] Adapting to protocol v5.1 for kernel 8b001184-658a-4c7d-9265-9471a8183c69
+[I 11:35:32.787 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:36:24.675 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df_rdd_boiler.ipynb
+[I 11:37:33.308 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:38:25.377 NotebookApp] Saving file at /notebooks/dataframes/04_friends_df_rdd_boiler.ipynb
+[I 11:39:32.727 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:41:32.731 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:45:33.393 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:46:18.703 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 11:47:32.802 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+WARN  2021-11-10 11:48:14,416 org.apache.spark.util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[I 11:49:32.738 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+WARN  2021-11-10 11:50:26,017 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:50:41,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:50:56,016 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:51:11,016 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:51:26,016 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[I 11:51:32.703 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+WARN  2021-11-10 11:51:41,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[I 11:51:43.202 NotebookApp] Kernel interrupted: 8b001184-658a-4c7d-9265-9471a8183c69
+WARN  2021-11-10 11:51:56,016 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:52:11,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[I 11:52:16.265 NotebookApp] Kernel interrupted: 8b001184-658a-4c7d-9265-9471a8183c69
+[I 11:52:19.038 NotebookApp] Kernel interrupted: 8b001184-658a-4c7d-9265-9471a8183c69
+WARN  2021-11-10 11:52:26,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:52:41,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-10 11:52:56,015 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+ERROR 2021-11-10 11:52:58,109 org.apache.spark.deploy.rm.DseSchedulerBackend: Scheduler backend is dead: Master removed our application: Heartbeat notification that app has been removed
+ERROR 2021-11-10 11:53:00,379 org.apache.spark.deploy.rm.DseAppClient: Failed to unregister application
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.deploy.rm.DseAppClient.stop(DseAppClient.scala:222)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.org$apache$spark$deploy$rm$DseSchedulerBackend$$stop(DseSchedulerBackend.scala:242)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.stop(DseSchedulerBackend.scala:114)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:455)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1605)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1783)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1293)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1782)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend$$anon$1.run(DseSchedulerBackend.scala:162)
+Caused by: org.apache.spark.SparkException: Could not find DseAppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:511)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 9 common frames omitted
+WARN  2021-11-10 11:53:05,181 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 1.0 (TID 1, 172.24.0.5): java.lang.NumberFormatException: For input string: "Will"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+WARN  2021-11-10 11:53:05,193 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 2.0 (TID 2, 172.24.0.5): java.lang.NumberFormatException: For input string: "Will"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+WARN  2021-11-10 11:53:05,196 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0, 172.24.0.5): java.lang.NumberFormatException: For input string: "Will"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-10 11:53:05,615 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 1.0 failed 4 times; aborting job
+ERROR 2021-11-10 11:53:05,638 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 0.0 failed 4 times; aborting job
+ERROR 2021-11-10 11:53:05,647 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 2.0 failed 4 times; aborting job
+[I 11:53:32.832 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+ERROR 2021-11-10 11:58:24,803 org.apache.spark.deploy.rm.DseSchedulerBackend: Scheduler backend is dead: Master removed our application: Heartbeat notification that app has been removed
+ERROR 2021-11-10 11:58:27,197 org.apache.spark.deploy.rm.DseAppClient: Failed to unregister application
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.deploy.rm.DseAppClient.stop(DseAppClient.scala:222)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.org$apache$spark$deploy$rm$DseSchedulerBackend$$stop(DseSchedulerBackend.scala:242)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.stop(DseSchedulerBackend.scala:114)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:455)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1605)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1783)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1293)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1782)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend$$anon$1.run(DseSchedulerBackend.scala:162)
+Caused by: org.apache.spark.SparkException: Could not find DseAppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:511)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 9 common frames omitted
+[I 11:59:32.754 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:01:32.735 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:02:30.057 NotebookApp] Starting buffering for 8b001184-658a-4c7d-9265-9471a8183c69:eecfd12ad394485f89594daeca419aa7
+[I 12:02:30.378 NotebookApp] Kernel shutdown: 8b001184-658a-4c7d-9265-9471a8183c69
+[W 12:02:49.819 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 10.05ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_intro_spark_schemas.ipynb
+[W 12:02:50.427 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.85ms referer=http://localhost:8888/notebooks/notebooks/dataframes/2_intro_spark_schemas.ipynb
+[I 12:02:52.663 NotebookApp] Adapting to protocol v5.1 for kernel 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 12:03:08.836 NotebookApp] Saving file at /notebooks/dataframes/02_intro_spark_schemas.ipynb
+[W 12:03:13.860 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 5.16ms referer=http://localhost:8888/notebooks/notebooks/dataframes/3_df_operations_filter_conditional.ipynb
+[W 12:03:14.142 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.69ms referer=http://localhost:8888/notebooks/notebooks/dataframes/3_df_operations_filter_conditional.ipynb
+[W 12:03:14.882 NotebookApp] Notebook notebooks/dataframes/3_df_operations_filter_conditional.ipynb is not trusted
+[I 12:03:15.560 NotebookApp] Kernel started: 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 12:03:16.489 NotebookApp] Adapting to protocol v5.1 for kernel 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 12:03:26.916 NotebookApp] Saving file at /notebooks/dataframes/03_df_operations_filter_conditional.ipynb
+[W 12:03:26.967 NotebookApp] Notebook notebooks/dataframes/03_df_operations_filter_conditional.ipynb is not trusted
+[W 12:05:54.416 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 11.32ms referer=http://localhost:8888/notebooks/notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[W 12:05:54.733 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.77ms referer=http://localhost:8888/notebooks/notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:05:56.247 NotebookApp] Kernel started: fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 12:05:57.203 NotebookApp] Adapting to protocol v5.1 for kernel fff3957f-c0ea-46cd-98f6-2b881d65a894
+WARN  2021-11-10 12:06:50,317 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0, 172.24.0.5): java.lang.NumberFormatException: For input string: "Will"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-10 12:06:50,557 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 0.0 failed 4 times; aborting job
+WARN  2021-11-10 12:07:31,890 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 3.0 (TID 6, 172.24.0.5): java.lang.NumberFormatException: For input string: "Will"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-10 12:07:32,097 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 3.0 failed 4 times; aborting job
+[I 12:07:56.381 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+WARN  2021-11-10 12:13:21,492 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 4.0 (TID 10, 172.24.0.5): java.lang.NumberFormatException: For input string: "Jean-Luc"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-10 12:13:21,706 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 4.0 failed 4 times; aborting job
+[I 12:13:56.357 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+WARN  2021-11-10 12:14:35,627 org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 5.0 (TID 14, 172.24.0.5): java.lang.NumberFormatException: For input string: "Jean-Luc"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at org.apache.spark.sql.execution.datasources.csv.CSVTypeCast$.castTo(CSVInferSchema.scala:241)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:116)
+	at org.apache.spark.sql.execution.datasources.csv.CSVRelation$$anonfun$csvParser$3.apply(CSVRelation.scala:85)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:128)
+	at org.apache.spark.sql.execution.datasources.csv.CSVFileFormat$$anonfun$buildReader$1$$anonfun$apply$2.apply(CSVFileFormat.scala:127)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:128)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:91)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:370)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:246)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$4.apply(SparkPlan.scala:240)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:803)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:319)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:283)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:86)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+ERROR 2021-11-10 12:14:35,803 org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 5.0 failed 4 times; aborting job
+[I 12:15:56.314 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:17:56.291 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:18:19.695 NotebookApp] Starting buffering for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 12:18:19.704 NotebookApp] Starting buffering for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 12:18:19.707 NotebookApp] Starting buffering for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 12:18:19.709 NotebookApp] Starting buffering for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 12:18:19.710 NotebookApp] Starting buffering for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 12:34:19.843 NotebookApp] Adapting to protocol v5.1 for kernel fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 12:34:19.947 NotebookApp] Restoring connection for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 12:34:20.077 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:34:21.041 NotebookApp] Adapting to protocol v5.1 for kernel 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 12:34:21.050 NotebookApp] Restoring connection for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 12:34:21.280 NotebookApp] Adapting to protocol v5.1 for kernel 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 12:34:21.294 NotebookApp] Restoring connection for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 12:34:21.469 NotebookApp] Adapting to protocol v5.1 for kernel 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 12:34:21.476 NotebookApp] Restoring connection for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 12:34:21.569 NotebookApp] Adapting to protocol v5.1 for kernel 327dbd7f-0175-4fee-9145-be60bf22b020
+[I 12:34:21.575 NotebookApp] Restoring connection for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 12:35:56.273 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:37:56.269 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:39:56.261 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 12:==>                                                     (9 + 6) / 199][Stage 12:===>                                                   (12 + 6) / 199][Stage 12:====>                                                  (15 + 7) / 199][Stage 12:======>                                                (23 + 6) / 199][Stage 12:========>                                              (30 + 6) / 199][Stage 12:===========>                                           (41 + 6) / 199][Stage 12:==============>                                        (52 + 9) / 199][Stage 12:===================>                                   (69 + 6) / 199][Stage 12:=======================>                               (86 + 6) / 199][Stage 12:===========================>                           (99 + 6) / 199][Stage 12:==============================>                       (114 + 6) / 199][Stage 12:=================================>                    (124 + 6) / 199][Stage 12:=======================================>              (144 + 7) / 199][Stage 12:==========================================>           (156 + 6) / 199][Stage 12:=============================================>        (168 + 6) / 199][Stage 12:=================================================>    (181 + 7) / 199]                                                                                [Stage 16:============>                                          (46 + 7) / 199][Stage 16:===================>                                   (70 + 6) / 199][Stage 16:=========================>                             (94 + 7) / 199][Stage 16:=================================>                    (125 + 5) / 199][Stage 16:=======================================>              (146 + 6) / 199][Stage 16:=================================================>    (181 + 6) / 199]                                                                                [Stage 20:=======================>                               (84 + 6) / 199][Stage 20:=================================>                    (123 + 7) / 199][Stage 20:===========================================>          (160 + 8) / 199]                                                                                [I 12:41:56.314 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 25:==========================>                            (96 + 7) / 199][Stage 25:=====================================>                (139 + 6) / 199][Stage 25:=================================================>    (181 + 7) / 199]                                                                                [I 12:43:56.289 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:45:56.301 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 29:=================================>                    (124 + 6) / 199][Stage 29:===========================================>          (161 + 6) / 199][Stage 29:==================================================>   (187 + 6) / 199]                                                                                [I 12:47:56.297 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 12:57:56.427 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 13:01:56.327 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 33:===========================>                          (102 + 6) / 199][Stage 33:=================================>                    (123 + 6) / 199][Stage 33:===========================================>          (159 + 7) / 199][Stage 33:=====================================================>(198 + 1) / 199]                                                                                [I 13:03:56.259 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 37:==============================>                       (113 + 6) / 199][Stage 37:=========================================>            (152 + 8) / 199][Stage 37:==================================================>   (187 + 6) / 199]                                                                                [Stage 41:============================>                         (106 + 6) / 199][Stage 41:=======================================>              (144 + 6) / 199][Stage 41:===============================================>      (175 + 6) / 199]                                                                                [Stage 45:==========================================>           (158 + 7) / 199]                                                                                [Stage 49:===================>                                   (70 + 6) / 199][Stage 49:=============================>                        (107 + 6) / 199][Stage 49:=======================================>              (146 + 7) / 199]                                                                                [I 13:05:56.312 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[Stage 53:============================>                         (104 + 7) / 199][Stage 53:========================================>             (149 + 6) / 199]                                                                                [Stage 57:====================>                                  (75 + 6) / 199][Stage 57:===============================>                      (117 + 6) / 199][Stage 57:===========================================>          (162 + 6) / 199]                                                                                [Stage 61:==============================>                       (114 + 7) / 199][Stage 61:==========================================>           (155 + 6) / 199][Stage 61:=================================================>    (183 + 6) / 199]                                                                                [I 13:07:56.291 NotebookApp] Saving file at /notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[I 13:08:16.333 NotebookApp] Starting buffering for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 13:08:16.337 NotebookApp] Starting buffering for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 13:08:16.338 NotebookApp] Starting buffering for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 13:08:16.346 NotebookApp] Starting buffering for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 13:08:16.359 NotebookApp] Starting buffering for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 15:58:22.013 NotebookApp] Adapting to protocol v5.1 for kernel 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 15:58:22.058 NotebookApp] Restoring connection for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 15:58:22.232 NotebookApp] Adapting to protocol v5.1 for kernel 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 15:58:22.249 NotebookApp] Restoring connection for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 15:58:22.288 NotebookApp] Adapting to protocol v5.1 for kernel 327dbd7f-0175-4fee-9145-be60bf22b020
+[I 15:58:22.301 NotebookApp] Restoring connection for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 15:58:22.355 NotebookApp] Adapting to protocol v5.1 for kernel 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 15:58:22.398 NotebookApp] Restoring connection for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 15:58:22.562 NotebookApp] Adapting to protocol v5.1 for kernel fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 15:58:22.575 NotebookApp] Restoring connection for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 19:17:27.406 NotebookApp] Starting buffering for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 19:17:27.415 NotebookApp] Starting buffering for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 19:17:27.417 NotebookApp] Starting buffering for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 19:17:27.419 NotebookApp] Starting buffering for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 19:17:27.426 NotebookApp] Starting buffering for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 05:15:22.717 NotebookApp] Adapting to protocol v5.1 for kernel 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 05:15:22.724 NotebookApp] Restoring connection for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 05:15:25.341 NotebookApp] Adapting to protocol v5.1 for kernel 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 05:15:25.402 NotebookApp] Restoring connection for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 05:15:25.492 NotebookApp] Adapting to protocol v5.1 for kernel fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 05:15:25.510 NotebookApp] Restoring connection for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[I 05:15:25.539 NotebookApp] Adapting to protocol v5.1 for kernel 327dbd7f-0175-4fee-9145-be60bf22b020
+[I 05:15:25.550 NotebookApp] Restoring connection for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 05:15:26.127 NotebookApp] Adapting to protocol v5.1 for kernel 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 05:15:26.142 NotebookApp] Restoring connection for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[W 08:31:20.267 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 6.79ms referer=http://localhost:8888/tree/notebooks/dataframes
+[W 08:31:20.389 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.73ms referer=http://localhost:8888/tree/notebooks/dataframes
+[I 09:04:22.337 NotebookApp] Starting buffering for 327dbd7f-0175-4fee-9145-be60bf22b020:584b9d66e1e34ae7a67c7610fceafba5
+[I 09:04:22.729 NotebookApp] Starting buffering for 545207c5-75a0-4b25-b6b3-ed4bf061c952:2a013d5e2c4a49a38cfcbaeb34773256
+[I 09:04:23.070 NotebookApp] Starting buffering for 13c736cc-b758-41c9-ba77-0f9f00b76caa:8ea12c6412d545f293e3cd19109c7057
+[I 09:04:23.538 NotebookApp] Starting buffering for 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff:a9c2daf215164e8390ebc56a938be8bd
+[I 09:04:23.973 NotebookApp] Starting buffering for fff3957f-c0ea-46cd-98f6-2b881d65a894:48b6edb5d3ee4265be2afacd4ca56a34
+[W 09:04:29.628 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.51ms referer=http://localhost:8888/notebooks/notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[W 09:04:29.756 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.10ms referer=http://localhost:8888/notebooks/notebooks/dataframes/06_count_by_age_df_exercise.ipynb
+[W 09:04:30.190 NotebookApp] Notebook notebooks/dataframes/06_count_by_age_df_exercise.ipynb is not trusted
+[I 09:04:30.496 NotebookApp] Adapting to protocol v5.1 for kernel fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 09:05:48.378 NotebookApp] Starting buffering for fff3957f-c0ea-46cd-98f6-2b881d65a894:b238391ed88641c884286990cb58cf80
+[I 09:05:48.887 NotebookApp] Kernel shutdown: fff3957f-c0ea-46cd-98f6-2b881d65a894
+[I 09:05:54.391 NotebookApp] Kernel shutdown: 81ab048e-e81a-4d8b-a3c6-ce4ed82204ff
+[I 09:05:54.895 NotebookApp] Kernel shutdown: 13c736cc-b758-41c9-ba77-0f9f00b76caa
+[I 09:05:55.502 NotebookApp] Kernel shutdown: 545207c5-75a0-4b25-b6b3-ed4bf061c952
+[I 09:05:56.108 NotebookApp] Kernel shutdown: 327dbd7f-0175-4fee-9145-be60bf22b020
+[W 09:05:56.853 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 5.02ms referer=http://localhost:8888/tree/notebooks/dataframes
+[W 09:05:57.132 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.09ms referer=http://localhost:8888/tree/notebooks/dataframes
+[I 13:58:35.664 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 13:58:35.998 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.83ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 13:58:36.085 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.56ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 13:58:36.557 NotebookApp] Kernel started: b391e2a1-4ebd-4eae-9e22-a4172827940a
+[I 13:58:37.103 NotebookApp] Adapting to protocol v5.1 for kernel b391e2a1-4ebd-4eae-9e22-a4172827940a
+[I 14:00:36.544 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:02:36.717 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:04:36.498 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:08:36.544 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:10:36.720 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:12:36.485 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:24:36.544 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:26:36.500 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:34:36.501 NotebookApp] Saving file at /notebooks/dataframes/07_df_funcs.ipynb
+[I 14:45:18.532 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 14:45:18.799 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.51ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 14:45:18.907 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.32ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 14:45:19.367 NotebookApp] Kernel started: 29bd191a-3b01-4e31-8057-d1335d006ffa
+[I 14:45:19.729 NotebookApp] Adapting to protocol v5.1 for kernel 29bd191a-3b01-4e31-8057-d1335d006ffa
+[I 14:47:19.725 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 14:49:19.374 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 14:51:19.337 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+WARN  2021-11-11 14:52:41,578 org.apache.spark.util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[I 14:53:19.330 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+WARN  2021-11-11 14:54:19,418 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-11 14:54:34,417 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-11 14:54:49,417 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+WARN  2021-11-11 14:55:04,417 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[I 14:55:19.384 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+WARN  2021-11-11 14:55:19,418 org.apache.spark.scheduler.TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+ERROR 2021-11-11 14:55:27,284 org.apache.spark.deploy.rm.DseSchedulerBackend: Scheduler backend is dead: Master removed our application: Heartbeat notification that app has been removed
+ERROR 2021-11-11 14:55:29,673 org.apache.spark.deploy.rm.DseAppClient: Failed to unregister application
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.deploy.rm.DseAppClient.stop(DseAppClient.scala:222)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.org$apache$spark$deploy$rm$DseSchedulerBackend$$stop(DseSchedulerBackend.scala:242)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend.stop(DseSchedulerBackend.scala:114)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:455)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1605)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1783)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1293)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1782)
+	at org.apache.spark.deploy.rm.DseSchedulerBackend$$anon$1.run(DseSchedulerBackend.scala:162)
+Caused by: org.apache.spark.SparkException: Could not find DseAppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:511)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 9 common frames omitted
+[I 14:57:19.717 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 14:59:19.337 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:01:19.383 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:05:19.725 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:07:19.336 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 8:================>                                       (57 + 6) / 199][Stage 8:===================>                                    (68 + 6) / 199][Stage 8:==========================>                             (94 + 6) / 199][Stage 8:===============================>                       (113 + 6) / 199][Stage 8:=====================================>                 (135 + 6) / 199][Stage 8:===========================================>           (157 + 6) / 199][Stage 8:=================================================>     (179 + 6) / 199]                                                                                [I 15:09:19.383 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:13:19.341 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:15:19.332 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 12:===============>                                       (57 + 6) / 199][Stage 12:========================>                              (87 + 6) / 199][Stage 12:=================================>                    (123 + 7) / 199][Stage 12:============================================>         (164 + 7) / 199]                                                                                [I 15:17:19.374 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 16:=============================================>        (168 + 7) / 199]                                                                                [Stage 20:===================================================>  (191 + 7) / 199]                                                                                [I 15:19:19.326 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:21:19.330 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 28:====================================================> (192 + 7) / 199]                                                                                [Stage 32:=================================>                    (124 + 6) / 199][Stage 32:================================================>     (179 + 6) / 199]                                                                                [I 15:23:19.394 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:25:19.331 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:27:19.335 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 50:=====================================================>(197 + 3) / 200]                                                                                [Stage 54:==========================================>           (155 + 7) / 199]                                                                                [Stage 56:>                                                       (0 + 0) / 200][Stage 56:================================================>     (181 + 6) / 200]                                                                                [Stage 58:==============================================>       (174 + 8) / 200]                                                                                [I 15:29:19.384 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 62:==========>                                            (39 + 6) / 200][Stage 62:==============>                                        (53 + 6) / 200][Stage 62:==================>                                    (67 + 6) / 200][Stage 62:======================>                                (81 + 6) / 200][Stage 62:==========================>                            (95 + 6) / 200][Stage 62:=============================>                        (110 + 6) / 200][Stage 62:=================================>                    (124 + 6) / 200][Stage 62:=====================================>                (138 + 6) / 200][Stage 62:=========================================>            (152 + 6) / 200][Stage 62:=============================================>        (168 + 6) / 200][Stage 62:=================================================>    (182 + 6) / 200][Stage 62:=====================================================>(197 + 3) / 200]                                                                                [I 15:33:19.340 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:37:02.142 NotebookApp] Starting buffering for 29bd191a-3b01-4e31-8057-d1335d006ffa:170efb54ed8b449189442f4e1f6a9e8e
+[I 15:37:02.348 NotebookApp] Kernel shutdown: 29bd191a-3b01-4e31-8057-d1335d006ffa
+[I 15:37:08.519 NotebookApp] Starting buffering for b391e2a1-4ebd-4eae-9e22-a4172827940a:f023dd89721749908416f6670fbb848f
+[I 15:37:08.725 NotebookApp] Kernel shutdown: b391e2a1-4ebd-4eae-9e22-a4172827940a
+[I 15:52:10.866 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 15:52:11.254 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 3.71ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 15:52:11.388 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.29ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 15:52:11.991 NotebookApp] Kernel started: ab8bd922-cffe-45a2-b192-2a1f1fe658e9
+[I 15:52:12.520 NotebookApp] Adapting to protocol v5.1 for kernel ab8bd922-cffe-45a2-b192-2a1f1fe658e9
+[I 15:54:11.946 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:56:11.974 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 15:58:12.825 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 16:34:11.938 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 16:36:12.744 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 17:31:47.210 NotebookApp] Starting buffering for ab8bd922-cffe-45a2-b192-2a1f1fe658e9:6e8c1608cec5437f88f5a2d267318d51
+[I 03:18:07.964 NotebookApp] Adapting to protocol v5.1 for kernel ab8bd922-cffe-45a2-b192-2a1f1fe658e9
+[I 03:18:08.005 NotebookApp] Restoring connection for ab8bd922-cffe-45a2-b192-2a1f1fe658e9:6e8c1608cec5437f88f5a2d267318d51
+[I 07:03:50.311 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 07:05:50.300 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 07:07:50.301 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[I 07:09:50.350 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 19:==========>                                            (38 + 6) / 199][Stage 19:==========>                                            (39 + 6) / 199][Stage 19:==============>                                        (52 + 6) / 199][Stage 19:===================>                                   (69 + 6) / 199][Stage 19:=========================>                             (91 + 6) / 199][Stage 19:=================================>                    (124 + 6) / 199][Stage 19:===========================================>          (160 + 7) / 199]                                                                                [Stage 23:=====================>                                 (78 + 6) / 199][Stage 23:===================================>                  (131 + 9) / 199][Stage 23:==================================================>   (185 + 6) / 199]                                                                                [I 07:11:50.302 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 27:==============================================>       (173 + 6) / 199]                                                                                [I 07:13:50.300 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 29:===============>                                       (56 + 6) / 200][Stage 29:===========================>                          (102 + 6) / 200][Stage 29:=================================================>    (184 + 6) / 200]                                                                                [Stage 33:>                                                       (0 + 6) / 200][Stage 33:>                                                       (2 + 6) / 200][Stage 33:=>                                                      (6 + 6) / 200][Stage 33:==>                                                     (9 + 6) / 200][Stage 33:===>                                                   (12 + 6) / 200][Stage 33:====>                                                  (18 + 6) / 200][Stage 33:=====>                                                 (20 + 6) / 200][Stage 33:======>                                                (24 + 6) / 200][Stage 33:=======>                                               (28 + 6) / 200][Stage 33:========>                                              (30 + 6) / 200][Stage 33:=========>                                             (35 + 6) / 200][Stage 33:=========>                                             (36 + 6) / 200][Stage 33:==========>                                            (38 + 6) / 200][Stage 33:===========>                                           (42 + 6) / 200][Stage 33:============>                                          (45 + 6) / 200][Stage 33:=============>                                         (48 + 6) / 200][Stage 33:=============>                                         (50 + 6) / 200][Stage 33:==============>                                        (54 + 6) / 200][Stage 33:===============>                                       (58 + 6) / 200][Stage 33:================>                                      (60 + 6) / 200][Stage 33:=================>                                     (64 + 6) / 200][Stage 33:==================>                                    (66 + 6) / 200][Stage 33:==================>                                    (68 + 6) / 200][Stage 33:===================>                                   (72 + 6) / 200][Stage 33:====================>                                  (73 + 6) / 200][Stage 33:=====================>                                 (79 + 7) / 200][Stage 33:=========================>                             (91 + 6) / 200][Stage 33:============================>                         (104 + 6) / 200][Stage 33:===============================>                      (118 + 6) / 200][Stage 33:===================================>                  (130 + 6) / 200][Stage 33:=======================================>              (146 + 6) / 200][Stage 33:==========================================>           (159 + 6) / 200][Stage 33:==============================================>       (171 + 6) / 200][Stage 33:=================================================>    (184 + 6) / 200][Stage 33:====================================================> (196 + 4) / 200][Stage 34:=========>                                             (17 + 6) / 101][Stage 34:==============>                                        (26 + 6) / 101][Stage 34:===================>                                   (35 + 6) / 101][Stage 34:=======================>                               (44 + 6) / 101][Stage 34:=============================>                         (55 + 6) / 101][Stage 34:==================================>                    (63 + 6) / 101][Stage 34:=======================================>               (73 + 6) / 101][Stage 34:=============================================>         (84 + 6) / 101][Stage 34:===================================================>   (95 + 6) / 101]                                                                                [Stage 37:===================================================>  (190 + 9) / 200]                                                                                [I 07:21:51.091 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+[Stage 1:===========>                                            (40 + 6) / 200][Stage 1:=============>                                          (48 + 6) / 200][Stage 1:====================>                                   (73 + 6) / 200][Stage 1:==========================>                             (93 + 6) / 200][Stage 1:==============================>                        (110 + 6) / 200][Stage 1:=====================================>                 (136 + 6) / 200][Stage 1:============================================>          (163 + 6) / 200][Stage 1:===================================================>   (188 + 6) / 200]                                                                                [I 07:23:50.306 NotebookApp] Saving file at /notebooks/dataframes/Untitled.ipynb
+ERROR 2021-11-12 07:23:50,686 org.apache.spark.scheduler.LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+[I 07:24:03.251 NotebookApp] Starting buffering for ab8bd922-cffe-45a2-b192-2a1f1fe658e9:6e8c1608cec5437f88f5a2d267318d51
+[I 07:24:03.456 NotebookApp] Kernel shutdown: ab8bd922-cffe-45a2-b192-2a1f1fe658e9
+[W 07:24:09.609 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.96ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb
+[W 07:24:09.749 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.46ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb
+[I 07:24:10.521 NotebookApp] Kernel started: 8c5a5f25-6117-4442-b355-227f0ef70059
+[I 07:24:11.170 NotebookApp] Adapting to protocol v5.1 for kernel 8c5a5f25-6117-4442-b355-227f0ef70059
+[I 07:24:29.881 NotebookApp] Starting buffering for 8c5a5f25-6117-4442-b355-227f0ef70059:e846f6c1a8e14f788a2947d4ed305eb2
+[I 07:24:30.086 NotebookApp] Kernel shutdown: 8c5a5f25-6117-4442-b355-227f0ef70059
+[W 14:18:09.918 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.61ms referer=http://localhost:8888/edit/data/u.data
+[W 14:18:10.010 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.37ms referer=http://localhost:8888/edit/data/u.data
+[W 14:18:46.682 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.34ms referer=http://localhost:8888/edit/data/movielens_ratings.csv
+[W 14:18:46.787 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.58ms referer=http://localhost:8888/edit/data/movielens_ratings.csv
+[W 14:19:04.274 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.44ms referer=http://localhost:8888/edit/data/walmart_stock.csv
+[W 14:19:04.285 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.11ms referer=http://localhost:8888/edit/data/walmart_stock.csv
+[W 14:19:09.004 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.39ms referer=http://localhost:8888/edit/data/test.csv
+[W 14:19:14.477 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.69ms referer=http://localhost:8888/edit/data/seeds_dataset.csv
+[W 14:19:14.488 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.85ms referer=http://localhost:8888/edit/data/seeds_dataset.csv
+[W 14:19:26.772 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.52ms referer=http://localhost:8888/edit/data/sales_info.csv
+[W 14:19:26.784 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.66ms referer=http://localhost:8888/edit/data/sales_info.csv
+[W 17:16:04.448 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.62ms referer=http://localhost:8888/edit/data/u.data
+[W 17:16:04.567 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.19ms referer=http://localhost:8888/edit/data/u.data
+[W 17:16:12.224 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.26ms referer=http://localhost:8888/edit/data/u.data
+[W 17:16:12.348 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.58ms referer=http://localhost:8888/edit/data/u.data
+[W 18:38:38.524 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 2.23ms referer=http://localhost:8888/edit/data/movielens_ratings.csv
+[W 18:38:38.642 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 1.47ms referer=http://localhost:8888/edit/data/movielens_ratings.csv
+[I 03:07:31.475 NotebookApp] Creating new notebook in /notebooks/dataframes
+[W 03:07:33.004 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 16.81ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[W 03:07:33.340 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.24.0.1) 4.38ms referer=http://localhost:8888/notebooks/notebooks/dataframes/Untitled.ipynb?kernel_name=python2
+[I 03:07:34.342 NotebookApp] Kernel started: b16f1bf7-2436-4954-9039-43eee29b6f97
+[I 03:07:36.913 NotebookApp] Adapting to protocol v5.1 for kernel b16f1bf7-2436-4954-9039-43eee29b6f97
+[I 03:09:34.374 NotebookApp] Saving file at /notebooks/dataframes/10_broadcast_udf.ipynb
+[I 05:53:02.446 NotebookApp] Starting buffering for b16f1bf7-2436-4954-9039-43eee29b6f97:2ce2eadb6aab490ca13c3f5095ebf62f
+[I 13:14:03.889 NotebookApp] Adapting to protocol v5.1 for kernel b16f1bf7-2436-4954-9039-43eee29b6f97
+[I 13:14:03.911 NotebookApp] Restoring connection for b16f1bf7-2436-4954-9039-43eee29b6f97:2ce2eadb6aab490ca13c3f5095ebf62f
+[I 13:33:57.336 NotebookApp] Starting buffering for b16f1bf7-2436-4954-9039-43eee29b6f97:2ce2eadb6aab490ca13c3f5095ebf62f
+[I 13:39:58.578 NotebookApp] Adapting to protocol v5.1 for kernel b16f1bf7-2436-4954-9039-43eee29b6f97
+[I 13:39:58.603 NotebookApp] Restoring connection for b16f1bf7-2436-4954-9039-43eee29b6f97:2ce2eadb6aab490ca13c3f5095ebf62f
+[I 13:40:38.142 NotebookApp] Starting buffering for b16f1bf7-2436-4954-9039-43eee29b6f97:2ce2eadb6aab490ca13c3f5095ebf62f

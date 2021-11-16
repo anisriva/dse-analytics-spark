@@ -28,8 +28,8 @@ executor_memory = 1
 executor_cores = 1
 
 # Define the task level variables
-task_name = 'apple_stocks'
-spark_script = 'apple_stocks.py'
+task_name = 'rdd_basic'
+spark_script = 'rdd_basic.py'
 
 # Defining the dag arguments
 default_args={

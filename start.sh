@@ -122,6 +122,7 @@ docker exec analytics-seed \
 dse spark-sql-thriftserver start --hiveconf \
 hive.server2.thrift.client.user=dse \
 hive.server2.thrift.client.password=dse \
+hive.server2.thrift.port=10001 \
 --conf spark.cores.max=2
 
 echo "Starting jupyter notebook"

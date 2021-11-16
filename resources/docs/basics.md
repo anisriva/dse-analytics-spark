@@ -53,3 +53,66 @@
 * reduce
 
 Nothing actually happens in the driver program until an action is called!
+
+### Data Frame Api:
+
+A DataSet of Row 
+
+Dataframes:
+
+1. Contains Row objects
+2. Can run SQL queries
+3. Can have a schema (efficient storage)
+4. Read and write to JSON, Hive, Parquet, csv, cassandra
+5. Communicated with JDBC/ODBC etc
+
+**Using DF Api:**
+
+1. Can write simple sql queries and work on huge datasets
+2. The same logic can be emulated in the spark df api way as well
+3. Can be converted back to rdd to use the rdd functions
+4. The trend in Spark is to use RDD's less and DF more.
+5. Allows better interoperability for MLLib and SPark Streaming
+6. Simplifies Development
+
+### DataSet Api:
+
+1. DF is really a DataSet of row objects
+2. Can wrap known, typed data too but its transparent in python and it works better in Scala.
+3. In scala use DataSet whenever possible
+
+### UDF
+
+User-Defined Functions (UDFs) are user-programmable routines that act on one row.
+
+ex:
+
+```python
+from pypsark.sql.types import IntegerType
+
+def square(x):
+    return x*x
+
+spark.udf.register("square", square, IntegerType())
+df = spark.sql("SELECT square('numeric_feild') from table")
+```
+
+or
+
+```python
+from pyspark.sql import functions as f
+
+name_dict = {id:value}
+
+def lookup_name(id):
+    return name_dict.value[id]
+
+lookup_name_udf = func.udf(lookup_name)
+```
+
+## Broadcast Variables
+
+* Broadcast objects to the executors such that they're always there whenever needed
+* sc.broadcast() to ship off whatever you want (sparkContext is the part of the spark session as well)
+* <broadcast_name>.value() to get the object back
+* Only good when working with small datasets

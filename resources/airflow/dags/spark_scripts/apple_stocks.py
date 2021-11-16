@@ -20,7 +20,7 @@ spark = SparkSession \
             .appName("AppleStocks") \
             .getOrCreate()
 
-file_path = 'file:///var/lib/spark/jupyter/data/appl_stock.csv'
+file_path = "file:///var/lib/spark/jupyter/data/appl_stock.csv"
 
 df = spark.read.format("csv").option("header","true").load(file_path)
 
