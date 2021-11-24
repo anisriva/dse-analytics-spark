@@ -44,6 +44,7 @@ services:
       - 7080-7100:7080-7100
       - 7077:7077
       - 4040-4060:4040-4060
+      - 18080:18080
     cap_add:
     - IPC_LOCK
     ulimits:
@@ -51,6 +52,8 @@ services:
     volumes: 
       - $HOME/mnt/cassandra/analytics-seed/cassandra:/var/lib/cassandra
       - $HOME/mnt/cassandra/analytics-seed/spark:/var/lib/spark
+      - $HOME/resources/spark/conf/spark-defaults.conf:/opt/dse/resources/spark/conf/spark-defaults.conf
+      - $HOME/resources/spark/history-spark-events:/tmp/spark-events
       - $HOME/resources/jupyter:/var/lib/spark/jupyter
   ds-studio:
     container_name: ds-studio
@@ -111,10 +114,10 @@ services:
           - "0.0.0.0:8080:8080"
       command:  >
           bash -c "airflow webserver"
-  sandbox:
-      image: anieshaz/spark-client:1.0
-      container_name: sandbox    
-      # volumes:
-      #     - C:\Work\workspace\spark-2.0.2-bin-without-hadoop:/spark
-      command:  >
-          bash -c "sleep infinity"
+  # sandbox:
+  #     image: anieshaz/spark-client:1.0
+  #     container_name: sandbox    
+  #     # volumes:
+  #     #     - C:\Work\workspace\spark-2.0.2-bin-without-hadoop:/spark
+  #     command:  >
+  #         bash -c "sleep infinity"

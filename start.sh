@@ -125,6 +125,10 @@ hive.server2.thrift.client.password=dse \
 hive.server2.thrift.port=10001 \
 --conf spark.cores.max=2
 
+echo "Starting Spark History server"
+docker exec analytics-seed \
+dse spark-history-server start
+
 echo "Starting jupyter notebook"
 docker exec analytics-seed sh //opt//dse//resources//spark//bin//start_jupyter.sh
 
