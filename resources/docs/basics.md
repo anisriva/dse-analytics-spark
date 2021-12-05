@@ -4,7 +4,7 @@
 * Divides the data by splitting it up in multiple nodes
 * Uses
   * Driver Program (Spark Context / Spark Session)
-    * Cluster Manager (Spark, Yarn)
+    * Cluster Manager (Spark, Yarn, Mesos, kubernetes)
       * Executor
         * Caches
         * Tasks
@@ -56,9 +56,9 @@ Nothing actually happens in the driver program until an action is called!
 
 ### Data Frame Api:
 
-A DataSet of Row 
+A DataSet of Row
 
-Dataframes:
+**Dataframes:**
 
 1. Contains Row objects
 2. Can run SQL queries
@@ -107,12 +107,28 @@ name_dict = {id:value}
 def lookup_name(id):
     return name_dict.value[id]
 
-lookup_name_udf = func.udf(lookup_name)
+lookup_name_udf = f.udf(lookup_name)
 ```
 
-## Broadcast Variables
+## Broadcast
 
 * Broadcast objects to the executors such that they're always there whenever needed
 * sc.broadcast() to ship off whatever you want (sparkContext is the part of the spark session as well)
 * <broadcast_name>.value() to get the object back
 * Only good when working with small datasets
+  ```python
+  map_dict = {"key1" :"value1", "key2":"value2"}
+  map_dict_broadcast = spark.sparkContext.broadcast(map_dict)
+  ```
+
+## Partitioning
+
+* Partitioning a huge data is really important beacause it will blow up all the executors due to OOM issue.
+* Spark does not automatically spread out the work of the job throughout the cluster but it should be dealt with it manually.
+* Partitioning splits up a job into different executors.
+* Use .pratitionBy() on an RDD before running a large operation that benefits from partitioning.
+  * join(), cogroup(), groupWith(), join(), leftOuterJoin(), rightOuterJoin(), groupByKey(), reduceByKey(), combineByKey(), and lookup() these operations will preserve the partitioning in the result as well.
+* Too few partitions wont take full advantage of the cluster.
+* Too many partitions results in too much overhead from shuffling data.
+* At least as many partitions as cores, or executors that fit within the available memory.
+* partitionBy(100) is usually a reasonable place to start for large operations.

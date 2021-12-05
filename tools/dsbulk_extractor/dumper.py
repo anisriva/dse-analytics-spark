@@ -2,14 +2,13 @@ import subprocess
 from sys import argv
 from shutil import make_archive
 from genericpath import isfile, isdir
-from os.path import isfile, join, abspath, expanduser
 from os import makedirs, listdir
 from socket import gethostname
-
+from os.path import isfile, join, abspath, expanduser
 
 class CommandBuilder:
     def __init__(self, keyspace, count):
-        self.hostname = 'analytics-seed'
+        self.hostname = gethostname()
         if not argv[0]=='':
             self.home_dir = abspath(argv[0]).split(argv[0])[0]
         else:
@@ -18,7 +17,13 @@ class CommandBuilder:
         self.count = count
 
     def get_table_list_command(self):
-        command = ['cqlsh', str(self.hostname), '-e', "select table_name from system_schema.tables where keyspace_name='{}';".format(self.keyspace)]
+        command = ['cqlsh', str(self.hostname), 
+                    '-e', '''select table_name 
+                                from system_schema.tables 
+                                where keyspace_name='{}';'''\
+                                .format(self.keyspace)
+                                ]
+                                
         print("Generating table list command : {}".format(command))
         return command
     
@@ -29,7 +34,6 @@ class CommandBuilder:
             raise Exception("dsbulk not found at {} please install".format(dsbulk_path))
 
         tables = listdir(data_load_extract_path)
-        #  -url ~/export-dir -k ks1 -t table1 -header false
         for table in tables:
             yield [join(dsbulk_path, "dsbulk"),
                                 "load",
@@ -67,6 +71,8 @@ class CommandRunner:
     
     def get_output(self):
         return self.output
+
+
 
 if __name__ == '__main__':
     keyspace = argv[1]

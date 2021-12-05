@@ -13,7 +13,7 @@
 # Author : Animesh Srivastava                                   #                              
 #                                                               #  
 #################################################################                                                    
-export HOME=`pwd`
+export HOME=$(dirname "$0")
 compose_path=$HOME/docker-compose.yaml
 
 check_server() {
@@ -122,8 +122,9 @@ docker exec analytics-seed \
 dse spark-sql-thriftserver start --hiveconf \
 hive.server2.thrift.client.user=dse \
 hive.server2.thrift.client.password=dse \
-hive.server2.thrift.port=10001 \
---conf spark.cores.max=2
+hive.server2.thrift.port=10000 \
+--conf spark.cores.max=2 \
+--conf spark.executor.memory=2g
 
 echo "Starting jupyter notebook"
 docker exec analytics-seed sh //opt//dse//resources//spark//bin//start_jupyter.sh

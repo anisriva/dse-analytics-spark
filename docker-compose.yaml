@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   trans-seed:
-    image: "anieshaz/dse-server:5.1.24-alpine"
+    image: "anieshaz/dse-server-buster:5.1.24"
     container_name: trans-seed
     # command: -Dcassandra.consistent.rangemovement=false
     environment:
@@ -22,7 +22,7 @@ services:
     volumes: 
       - $HOME/mnt/cassandra/trans-seed/cassandra:/var/lib/cassandra      
   analytics-seed:
-    image: "anieshaz/dse-server:5.1.24-alpine"
+    image: "anieshaz/dse-server-buster:5.1.24"
     # command: -Dcassandra.consistent.rangemovement=false
     container_name: analytics-seed
     command: -k
@@ -51,7 +51,7 @@ services:
     volumes: 
       - $HOME/mnt/cassandra/analytics-seed/cassandra:/var/lib/cassandra
       - $HOME/mnt/cassandra/analytics-seed/spark:/var/lib/spark
-      - $HOME/resources/jupyter:/var/lib/spark/jupyter
+      - $HOME/resources/jupyter:/var/lib/jupyter
   ds-studio:
     container_name: ds-studio
     image: datastax/dse-studio
