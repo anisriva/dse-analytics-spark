@@ -1,0 +1,3 @@
+candidate_email,transactions
+cust2@email.com,"[{'transaction_id':'12', 'transaction_amount':'$23.43'},{'transaction_id':'15', 'transaction_amount':'$723.41'}]"
+cust1@email.com,"[{'transaction_id':'10', 'transaction_amount':'$55.99'},{'transaction_id':'11', 'transaction_amount':'$20.46'},{'transaction_id':'13', 'transaction_amount':'$5.89'},{'transaction_id':'14', 'transaction_amount':'$35.61'}]"

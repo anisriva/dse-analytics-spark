@@ -35,6 +35,7 @@ services:
       - NUM_TOKENS=8
       - JVM_EXTRA_OPTS=-Xmx20g -Xms1g
       - PYTHONPATH=/opt/dse/resources/spark/python
+      - DATA_LAKE=/var/lib/jupyter/data/
     links:
       - trans-seed
     # Allow DSE to lock memory with mlock
