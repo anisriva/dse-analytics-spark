@@ -14,6 +14,8 @@
 * Code in Python, Java or Scala
 * Built around concept of RDD
 
+![Spark Setup](./images/working_of_DAG_in_Spark.png)
+
 ## Why Python?
 
 * Pros
@@ -120,15 +122,3 @@ lookup_name_udf = f.udf(lookup_name)
   map_dict = {"key1" :"value1", "key2":"value2"}
   map_dict_broadcast = spark.sparkContext.broadcast(map_dict)
   ```
-
-## Partitioning
-
-* Partitioning a huge data is really important beacause it will blow up all the executors due to OOM issue.
-* Spark does not automatically spread out the work of the job throughout the cluster but it should be dealt with it manually.
-* Partitioning splits up a job into different executors.
-* Use .pratitionBy() on an RDD before running a large operation that benefits from partitioning.
-  * join(), cogroup(), groupWith(), join(), leftOuterJoin(), rightOuterJoin(), groupByKey(), reduceByKey(), combineByKey(), and lookup() these operations will preserve the partitioning in the result as well.
-* Too few partitions wont take full advantage of the cluster.
-* Too many partitions results in too much overhead from shuffling data.
-* At least as many partitions as cores, or executors that fit within the available memory.
-* partitionBy(100) is usually a reasonable place to start for large operations.
