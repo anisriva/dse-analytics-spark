@@ -1,7 +1,7 @@
 # Spark Basics
 
 * Its a fast and general engine for large-scale data processing
-* Divides the data by splitting it up in multiple nodes
+* Computes the data in distributed manner.
 * Uses
   * Driver Program (Spark Context / Spark Session)
     * Cluster Manager (Spark, Yarn, Mesos, kubernetes)

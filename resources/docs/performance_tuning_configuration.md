@@ -1,4 +1,4 @@
-# Performance tuning
+# Performance tuning using configuration changes
 
 ### 1. Use Columnar format when Caching
 
